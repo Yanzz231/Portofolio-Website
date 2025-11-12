@@ -9,7 +9,6 @@ const dragTransition = {
 };
 
 const Card = memo(({ style, text, image, icon: Icon, containerRef }) => {
-  // If icon component is provided
   if (Icon) {
     return (
       <motion.div
@@ -29,7 +28,6 @@ const Card = memo(({ style, text, image, icon: Icon, containerRef }) => {
     );
   }
 
-  // If image path is provided
   if (image && !text) {
     return (
       <motion.img
@@ -47,7 +45,6 @@ const Card = memo(({ style, text, image, icon: Icon, containerRef }) => {
     );
   }
 
-  // If text is provided
   return (
     <motion.div
       className="absolute px-6 py-4 text-xl text-center whitespace-nowrap rounded-full ring ring-gray-700 font-extralight bg-storm cursor-grab will-change-transform"

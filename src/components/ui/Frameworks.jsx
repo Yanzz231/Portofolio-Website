@@ -34,56 +34,44 @@ import {
   StrapiLogo,
 } from "../logos";
 
-// Tech stack based on CV:
-// Programming Languages: C#, JavaScript, TypeScript, C++, HTML, CSS, Python, Golang
-// Frameworks & Libraries: ASP.NET, .NET 6, ReactJS, NextJS, ExpressJS, Tailwind, Bootstrap
-// Databases: MySQL, MongoDB, Prisma, PostgreSQL
-// Tools & Platforms: Azure DevOps, Git, Postman, RDP, VPS, NGINX, GCP
-// Software: Figma, JetBrains IDEA, Strapi
-// Additional: ELK Stack (Elasticsearch, Logstash, Kibana), Firebase, Supabase, Vite
-
-// Split skills into 3 groups for 3 orbits
-// Outer orbit (largest): 14 icons
 const outerSkills = [
-  ReactLogo,            // ReactJS
-  NextjsLogo,           // NextJS
-  DotnetLogo,           // ASP.NET / .NET 6
-  GolangLogo,           // Golang
-  JavascriptLogo,       // JavaScript
-  TypescriptLogo,       // TypeScript
-  CsharpLogo,           // C#
-  PythonLogo,           // Python
-  Html5Logo,            // HTML
-  Css3Logo,             // CSS
-  ElasticsearchLogo,    // Elasticsearch
-  FirebaseLogo,         // Firebase
-  SupabaseLogo,         // Supabase
-  MysqlLogo,            // MySQL
+  ReactLogo,
+  NextjsLogo,
+  DotnetLogo,
+  GolangLogo,
+  JavascriptLogo,
+  TypescriptLogo,
+  CsharpLogo,
+  PythonLogo,
+  Html5Logo,
+  Css3Logo,
+  ElasticsearchLogo,
+  FirebaseLogo,
+  SupabaseLogo,
+  MysqlLogo,
 ];
 
-// Middle orbit: 10 icons
 const middleSkills = [
-  TailwindcssLogo,      // Tailwind
-  BootstrapLogo,        // Bootstrap
-  VitejsLogo,           // Vite
-  ExpressjsLogo,        // ExpressJS
-  AzureLogo,            // Azure DevOps
-  GcpLogo,              // GCP
-  GitLogo,              // Git
-  NginxLogo,            // NGINX
-  MongodbLogo,          // MongoDB
-  PostgresqlLogo,       // PostgreSQL
+  TailwindcssLogo,
+  BootstrapLogo,
+  VitejsLogo,
+  ExpressjsLogo,
+  AzureLogo,
+  GcpLogo,
+  GitLogo,
+  NginxLogo,
+  MongodbLogo,
+  PostgresqlLogo,
 ];
 
-// Inner orbit (smallest): 7 icons
 const innerSkills = [
-  PostmanLogo,          // Postman
-  FigmaLogo,            // Figma
-  LogstashLogo,         // Logstash
-  KibanaLogo,           // Kibana
-  CplusplusLogo,        // C++
-  PrismaLogo,           // Prisma
-  StrapiLogo,           // Strapi
+  PostmanLogo,
+  FigmaLogo,
+  LogstashLogo,
+  KibanaLogo,
+  CplusplusLogo,
+  PrismaLogo,
+  StrapiLogo,
 ];
 
 const Frameworks = memo(() => {

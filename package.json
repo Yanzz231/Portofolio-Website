@@ -14,6 +14,7 @@
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.0",
     "@react-three/fiber": "^9.0.4",
+    "@splinetool/react-spline": "^4.1.0",
     "@tailwindcss/vite": "^4.0.7",
     "@types/three": "^0.173.0",
     "cobe": "^0.6.3",

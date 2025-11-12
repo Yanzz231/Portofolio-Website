@@ -2,6 +2,14 @@ import { useState, memo, useCallback } from "react";
 import emailjs from "@emailjs/browser";
 import { Alert } from "../components/ui";
 import { Particles } from "../components/animation";
+import { Robot } from "../components/3d";
+import { mySocials } from "../constants";
+import { InstagramIcon, LinkedInIcon } from "../components/socials";
+
+const socialIconMap = {
+  instagram: InstagramIcon,
+  linkedin: LinkedInIcon,
+};
 
 const Contact = memo(() => {
   const [formData, setFormData] = useState({
@@ -29,7 +37,6 @@ const Contact = memo(() => {
     setIsLoading(true);
 
     try {
-      console.log("From submitted:", formData);
       await emailjs.send(
         "service_79b0nyj",
         "template_17us8im",
@@ -47,85 +54,120 @@ const Contact = memo(() => {
       showAlertMessage("success", "You message has been sent!");
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
       showAlertMessage("danger", "Somthing went wrong!");
     }
   };
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section className="relative section-spacing">
       <Particles
-        className="absolute inset-0 -z-50"
+        className="absolute inset-0 -top-[300px] -z-50"
         quantity={50}
         ease={80}
         color={"#ffffff"}
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
-        <div className="flex flex-col items-start w-full gap-5 mb-10">
-          <h2 className="text-heading">Let's Talk</h2>
-          <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
-          </p>
+
+      <div className="c-space grid grid-cols-1 lg:grid-cols-[60%_40%] gap-10 items-center">
+        <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto lg:mx-0 border border-white/10 rounded-2xl bg-primary order-1 lg:order-1">
+          <div className="flex flex-col items-start w-full gap-5 mb-10">
+            <h2 className="text-heading">Let's Talk</h2>
+            <p className="font-normal text-neutral-400">
+              Whether you're loking to build a new website, improve your existing
+              platform, or bring a unique project to life, I'm here to help
+            </p>
+          </div>
+          <form className="w-full" onSubmit={handleSubmit}>
+            <div className="mb-5">
+              <label htmlFor="name" className="feild-label">
+                Full Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                className="field-input field-input-focus"
+                placeholder="John Doe"
+                autoComplete="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="email" className="feild-label">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                className="field-input field-input-focus"
+                placeholder="JohnDoe@email.com"
+                autoComplete="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="message" className="feild-label">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                type="text"
+                rows="4"
+                className="field-input field-input-focus"
+                placeholder="Share your thoughts..."
+                autoComplete="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+            >
+              {!isLoading ? "Send" : "Sending..."}
+            </button>
+          </form>
         </div>
-        <form className="w-full" onSubmit={handleSubmit}>
-          <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
-              Full Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              className="field-input field-input-focus"
-              placeholder="John Doe"
-              autoComplete="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+
+        <div className="h-[500px] lg:h-[600px] w-full order-2 lg:order-2">
+          <Robot />
+        </div>
+      </div>
+
+      <div className="relative pt-[400px] pb-3">
+        <div
+          className="absolute bottom-0 pointer-events-none h-[800px]"
+          style={{
+            left: '50%',
+            right: 'auto',
+            transform: 'translateX(-50%)',
+            width: '100vw',
+            backgroundImage: 'url(/assets/images/backgrounds/mountain-footer.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center bottom',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.3
+          }}
+        />
+        <div className="relative z-10 w-full c-space">
+          <div className="flex justify-center gap-3">
+            {mySocials.map((social, index) => {
+              const IconComponent = socialIconMap[social.name.toLowerCase()];
+              return IconComponent ? (
+                <a href={social.href} key={index} target="_blank" rel="noopener noreferrer">
+                  <IconComponent />
+                </a>
+              ) : null;
+            })}
           </div>
-          <div className="mb-5">
-            <label htmlFor="email" className="feild-label">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              className="field-input field-input-focus"
-              placeholder="JohnDoe@email.com"
-              autoComplete="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <label htmlFor="message" className="feild-label">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              type="text"
-              rows="4"
-              className="field-input field-input-focus"
-              placeholder="Share your thoughts..."
-              autoComplete="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
-          >
-            {!isLoading ? "Send" : "Sending..."}
-          </button>
-        </form>
+        </div>
       </div>
     </section>
   );

@@ -1,9 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import Navbar from "./sections/navbar";
 import Hero from "./sections/Hero";
-import Footer from './sections/Footer';
 
-// Lazy load heavy sections
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Experiences = lazy(() => import("./sections/Experiences"));
@@ -30,7 +28,6 @@ const App = () => {
       <Suspense fallback={<div className="h-screen" />}>
         <Contact />
       </Suspense>
-      <Footer/>
     </div>
   );
 };

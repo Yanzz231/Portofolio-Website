@@ -1,10 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run dev:*)",
-      "Bash(node generate-logos.js:*)",
-      "Bash(Get-Process -Name \"node\" -ErrorAction SilentlyContinue)",
-      "Bash(Where-Object {$_ath -like \"*Portfolio*\"})"
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []
