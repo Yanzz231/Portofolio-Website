@@ -1,6 +1,7 @@
 export { default as Alert } from './Alert';
 export { default as Card } from './Card';
 export { default as CopyEmailButton } from './CopyEmailButton';
+export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as Frameworks } from './Frameworks';
 export { default as HeroText } from './HeroText';
 export { default as Loader } from './Loader';

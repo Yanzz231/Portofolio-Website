@@ -11,7 +11,7 @@ const Contact = lazy(() => import("./sections/Contact"));
 const App = () => {
   return (
     <div className="container mx-auto max-w-7xl">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Suspense fallback={<div className="h-screen" />}>
         <About />
