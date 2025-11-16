@@ -24,7 +24,7 @@ COPY --from=builder /app/dist /srv
 # Copy Caddyfile
 COPY Caddyfile /etc/caddy/Caddyfile
 
-# Expose port (Railway will set PORT env var)
-EXPOSE 80
+# Expose port 8080 for Railway
+EXPOSE 8080
 
 # Caddy will automatically use /etc/caddy/Caddyfile
