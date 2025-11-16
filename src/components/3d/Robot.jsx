@@ -41,10 +41,6 @@ const Robot = memo(() => {
       if (canvas) {
         canvas.style.background = 'transparent';
         canvas.style.backgroundColor = 'transparent';
-        const gl = canvas.getContext('webgl') || canvas.getContext('webgl2');
-        if (gl) {
-          gl.clearColor(0, 0, 0, 0);
-        }
       }
     }, 100);
     return () => clearTimeout(timer);
