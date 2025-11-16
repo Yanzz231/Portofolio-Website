@@ -3,13 +3,6 @@ import emailjs from "@emailjs/browser";
 import { Alert } from "../components/ui";
 import { Particles } from "../components/animation";
 import { Robot } from "../components/3d";
-import { mySocials } from "../constants";
-import { InstagramIcon, LinkedInIcon } from "../components/socials";
-
-const socialIconMap = {
-  instagram: InstagramIcon,
-  linkedin: LinkedInIcon,
-};
 
 const Contact = memo(() => {
   const [formData, setFormData] = useState({
@@ -156,18 +149,6 @@ const Contact = memo(() => {
             opacity: 0.3
           }}
         />
-        <div className="relative z-10 w-full c-space">
-          <div className="flex justify-center gap-3">
-            {mySocials.map((social, index) => {
-              const IconComponent = socialIconMap[social.name.toLowerCase()];
-              return IconComponent ? (
-                <a href={social.href} key={index} target="_blank" rel="noopener noreferrer">
-                  <IconComponent />
-                </a>
-              ) : null;
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );
