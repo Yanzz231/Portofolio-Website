@@ -65,6 +65,8 @@ const Globe = memo(({ className, config = GLOBE_CONFIG }) => {
   }, [r]);
 
   useEffect(() => {
+    if (!canvasRef.current) return;
+
     let resizeTimeout;
     const onResize = () => {
       if (canvasRef.current) {
@@ -80,6 +82,18 @@ const Globe = memo(({ className, config = GLOBE_CONFIG }) => {
     window.addEventListener("resize", handleResize);
     onResize();
 
+    // Get existing context and clean it if exists
+    const existingContext = canvasRef.current.getContext('webgl') ||
+                           canvasRef.current.getContext('webgl2') ||
+                           canvasRef.current.getContext('experimental-webgl');
+
+    if (existingContext) {
+      const loseContext = existingContext.getExtension('WEBGL_lose_context');
+      if (loseContext) {
+        loseContext.loseContext();
+      }
+    }
+
     const globe = createGlobe(canvasRef.current, {
       ...config,
       width: width * 2,
@@ -92,7 +106,12 @@ const Globe = memo(({ className, config = GLOBE_CONFIG }) => {
       },
     });
 
-    setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    }, 0);
+
     return () => {
       globe.destroy();
       clearTimeout(resizeTimeout);

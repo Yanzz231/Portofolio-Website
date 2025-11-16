@@ -18,7 +18,14 @@ const Hero = () => {
       >
         <Canvas
           camera={{ position: [0, 1, 3] }}
-          gl={{ antialias: false, powerPreference: "high-performance" }}
+          gl={{
+            antialias: false,
+            powerPreference: "high-performance",
+            alpha: true,
+            stencil: false,
+            depth: true,
+            preserveDrawingBuffer: false
+          }}
           dpr={[1, 1.5]}
         >
           <Suspense fallback={null}>
