@@ -66,6 +66,38 @@ export const experiences = [
     ],
   },
   {
+    job: "Binus Nusantara Computer Club (BNCC)",
+    title: "Activist",
+    date: "Sep 2025 - Present",
+    positions: [
+      {
+        title: "Elite Team Member",
+        event: "BNCC Elite Team",
+        date: "Sep 2025 - Present",
+        contents: [
+          "Selected as part of BNCC's Elite Team, a specialized group representing the organization in hackathon and technology competitions.",
+          "Participated in hackathon-style projects focusing on real-world problem solving and rapid prototyping.",
+          "Worked in teams to design, develop, and pitch functional applications within tight deadlines.",
+          "Applied knowledge in programming, UI/UX, and system design to build complete product concepts.",
+          "Enhanced collaboration, adaptability, and communication skills through competition experiences.",
+        ],
+      },
+      {
+        title: "Learning and Training (LnT) C Programming Member",
+        event: "BNCC LnT Regular Class",
+        date: "Sep 2025 - Present",
+        contents: [
+          "Participated in BNCC's Learning and Training (LnT) Regular Class on C Programming, focusing on fundamental programming concepts and problem-solving using the C language.",
+          "Learned about data types, control structures, functions, arrays, and pointers while implementing structured programming practices through various exercises and projects.",
+          "Gained hands-on experience in writing efficient and readable C programs.",
+          "Practiced algorithmic thinking and debugging skills through weekly coding tasks.",
+          "Developed mini projects that apply logic, loops, and modular programming techniques.",
+          "Collaborated with peers to improve code quality and logical flow.",
+        ],
+      },
+    ],
+  },
+  {
     job: "HIMTI Binus University",
     title: "Activist",
     date: "Oct 2024 - Present",
@@ -82,7 +114,7 @@ export const experiences = [
       {
         title: "Technical Division Staff",
         event: "SESVENT 2025",
-        date: "Oct 2024 - Oct 2024",
+        date: "Oct 2025 - Oct 2025",
         contents: [
           "Assisted the Technical Division team in handling both online and offline operations during SESVENT 2025, ensuring the event ran smoothly from a technical perspective.",
           "Helped manage Zoom sessions, including spotlight control, speaker transitions, and simple live documentation.",
