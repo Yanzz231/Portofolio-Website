@@ -25,7 +25,9 @@ const App = () => {
           </section>
         </Suspense>
         <Suspense fallback={<div className="h-screen" />}>
-          <Experiences />
+          <section id="experience">
+            <Experiences />
+          </section>
         </Suspense>
         <Suspense fallback={<div className="h-screen" />}>
           <Testimonial />
