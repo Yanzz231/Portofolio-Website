@@ -122,7 +122,8 @@ const Contact = memo(() => {
             </div>
             <button
               type="submit"
-              className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation"
+              className="w-full px-6 py-3.5 text-center rounded-md cursor-pointer bg-radial from-lavender to-royal hover-animation font-semibold min-h-[52px] transition-all duration-200"
+              style={{ fontSize: 'clamp(0.9375rem, 1.5vw, 1.125rem)' }}
             >
               {!isLoading ? "Send" : "Sending..."}
             </button>

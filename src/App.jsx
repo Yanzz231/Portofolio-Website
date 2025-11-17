@@ -5,7 +5,7 @@ import Hero from "./sections/Hero";
 const About = lazy(() => import("./sections/About"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Experiences = lazy(() => import("./sections/Experiences"));
-const Testimonial = lazy(() => import("./sections/Testimonial"));
+const Certifications = lazy(() => import("./sections/Certifications"));
 const Contact = lazy(() => import("./sections/Contact"));
 
 const App = () => {
@@ -30,7 +30,9 @@ const App = () => {
           </section>
         </Suspense>
         <Suspense fallback={<div className="h-screen" />}>
-          <Testimonial />
+          <section id="certifications">
+            <Certifications />
+          </section>
         </Suspense>
         <Suspense fallback={<div className="h-screen" />}>
           <section id="contact">

@@ -10,31 +10,30 @@ const TimelineItem = memo(({ item, index }) => {
           <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
         </div>
         <div className="flex-col hidden gap-2 font-bold md:flex md:pl-20 text-neutral-300">
-          <h3 className="text-lg md:text-xl">{item.date}</h3>
-          {item.title && <h3 className="text-2xl md:text-3xl text-neutral-400">{item.title}</h3>}
-          <h3 className="text-xl md:text-2xl text-neutral-500">{item.job}</h3>
+          <h3 style={{ fontSize: 'clamp(1rem, 1.8vw, 1.25rem)' }}>{item.date}</h3>
+          {item.title && <h3 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 1.875rem)' }} className="text-neutral-400">{item.title}</h3>}
+          <h3 style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.5rem)' }} className="text-neutral-500">{item.job}</h3>
         </div>
       </div>
 
       <div className="relative w-full pl-20 pr-4 md:pl-4">
         <div className="block mb-4 text-left md:hidden">
-          <h3 className="text-lg font-bold text-neutral-300">{item.date}</h3>
-          {item.title && <h3 className="text-2xl font-bold text-neutral-400">{item.title}</h3>}
-          <h3 className="text-xl font-bold text-neutral-500">{item.job}</h3>
+          <h3 className="font-bold text-neutral-300" style={{ fontSize: 'clamp(0.875rem, 3.5vw, 1.125rem)' }}>{item.date}</h3>
+          {item.title && <h3 className="font-bold text-neutral-400" style={{ fontSize: 'clamp(1.25rem, 5vw, 1.5rem)' }}>{item.title}</h3>}
+          <h3 className="font-bold text-neutral-500" style={{ fontSize: 'clamp(1rem, 4.5vw, 1.25rem)' }}>{item.job}</h3>
         </div>
 
-        {/* Check if item has positions (nested structure like HIMTI) */}
         {item.positions ? (
           <div className="space-y-6">
             {item.positions.map((position, posIndex) => (
               <div key={posIndex} className="pb-6 border-b border-neutral-700 last:border-b-0">
                 <div className="mb-3">
-                  <h4 className="text-xl font-bold text-neutral-300">{position.title}</h4>
-                  <p className="text-sm text-neutral-400">{position.event} · {position.date}</p>
+                  <h4 className="font-bold text-neutral-300" style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>{position.title}</h4>
+                  <p className="text-neutral-400" style={{ fontSize: 'clamp(0.8125rem, 1.5vw, 0.875rem)' }}>{position.event} · {position.date}</p>
                 </div>
                 <ul className="space-y-3 list-disc list-outside ml-5">
                   {position.contents.map((content, contentIndex) => (
-                    <li className="font-normal text-neutral-400 pl-2" key={contentIndex}>
+                    <li className="font-normal text-neutral-400 pl-2" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }} key={contentIndex}>
                       {content}
                     </li>
                   ))}
@@ -45,7 +44,7 @@ const TimelineItem = memo(({ item, index }) => {
         ) : (
           <ul className="space-y-3 list-disc list-outside ml-5">
             {item.contents.map((content, contentIndex) => (
-              <li className="font-normal text-neutral-400 pl-2" key={contentIndex}>
+              <li className="font-normal text-neutral-400 pl-2" style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }} key={contentIndex}>
                 {content}
               </li>
             ))}

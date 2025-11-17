@@ -73,7 +73,6 @@ const ProjectItem = memo(({ project, index }) => {
         className="pImg"
       >
         <img src={project.images[0]} alt={project.title} loading="lazy" />
-        {/* Image overlay on hover */}
         <div className="pImg-overlay" />
       </motion.div>
 
@@ -82,7 +81,6 @@ const ProjectItem = memo(({ project, index }) => {
         animate={isInView ? "animate" : "initial"}
         className="pText"
       >
-        {/* Tags/Tech Stack */}
         {project.tags && project.tags.length > 0 && (
           <motion.div variants={childVariants} className="flex gap-2 flex-wrap mb-4">
             {project.tags.slice(0, 3).map((tag) => (
@@ -101,7 +99,7 @@ const ProjectItem = memo(({ project, index }) => {
             <button className="project-btn-primary">
               <span>View Project</span>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-2">
-                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </a>
@@ -122,15 +120,12 @@ const Projects = memo(() => {
     offset: ["start start", "end end"]
   });
 
-  // Snap to discrete project positions
   const xTranslate = useTransform(scrollYProgress, (latest) => {
-    // Split scroll into equal sections for each project
     const projectIndex = Math.min(
       Math.floor(latest * myProjects.length),
       myProjects.length - 1
     );
 
-    // Use actual viewport width for accurate positioning
     const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
     return -viewportWidth * projectIndex;
   });
@@ -143,7 +138,7 @@ const Projects = memo(() => {
 
   return (
     <div className="portfolio" ref={ref}>
-      <motion.div className="pList" style={{ x: smoothX }}>
+      <motion.div className="pList " style={{ x: smoothX }}>
         {myProjects.map((project, index) => (
           <ProjectItem project={project} index={index} key={project.id} />
         ))}

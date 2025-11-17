@@ -1,4 +1,3 @@
-// Auto-generated logo exports
 export { default as Auth0Logo } from './Auth0Logo';
 export { default as AzureLogo } from './AzureLogo';
 export { default as BlazorLogo } from './BlazorLogo';

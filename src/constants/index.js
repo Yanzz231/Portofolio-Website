@@ -244,3 +244,39 @@ export const reviews = [
     img: "https://robohash.org/eve",
   },
 ];
+
+export const certifications = [
+  {
+    title: "Web Design Competition 2024",
+    organizer: "National IT Competition",
+    date: "March 2024",
+    achievement: "1st Place",
+    description: "Secured first place in the national-level web design competition, showcasing advanced UI/UX design and frontend development skills.",
+    logo: "/assets/certifications/trophy.svg", // optional
+    projectUrl: "https://github.com/yourusername/project", // optional
+    articleUrl: "https://example.com/article", // optional
+    skills: ["UI/UX", "React", "Figma"],
+  },
+  {
+    title: "Tech Summit Hackathon 2024",
+    organizer: "Tech Summit Indonesia",
+    date: "February 2024",
+    achievement: "Winner - Best Innovation",
+    description: "Won the Best Innovation award for developing an AI-powered learning platform within 24 hours.",
+    logo: "/assets/certifications/hackathon.svg", // optional
+    projectUrl: "https://github.com/yourusername/hackathon-project", // optional
+    articleUrl: "#", // optional
+    skills: ["JavaScript", "AI/ML", "Team Work"],
+  },
+  {
+    title: "Code Challenge Competition",
+    organizer: "Developer Community",
+    date: "January 2024",
+    achievement: "Finalist",
+    description: "Reached the finals of the national coding competition with advanced algorithm and data structure solutions.",
+    logo: "", // optional - will show emoji if empty
+    projectUrl: "", // optional
+    articleUrl: "", // optional
+    skills: ["Algorithms", "Problem Solving", "Python"],
+  },
+];

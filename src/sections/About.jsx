@@ -30,7 +30,6 @@ const About = memo(() => {
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
-        {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
           <img
             src="assets/images/misc/coding-pov.png"
@@ -46,13 +45,12 @@ const About = memo(() => {
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
-        {/* Grid 2 */}
         <div className="grid-default-color grid-2">
           <div
             ref={grid2Container}
             className="flex items-center justify-center w-full h-full relative"
           >
-            <p className="text-4xl md:text-5xl font-bold text-gray-300 text-center px-4">
+            <p className="font-bold text-gray-300 text-center px-4" style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)' }}>
               Soft Skills
             </p>
             <Card
@@ -82,7 +80,6 @@ const About = memo(() => {
             />
           </div>
         </div>
-        {/* Grid 3 */}
         <div ref={globeContainer} className="grid-black-color grid-3">
           <div className="z-10 w-[60%]">
             <p className="headtext">Location</p>
@@ -94,7 +91,6 @@ const About = memo(() => {
             {showGlobe && <Globe />}
           </figure>
         </div>
-        {/* Grid 4 */}
         <div className="grid-special-color grid-4 relative overflow-hidden">
           <div className="flex flex-col items-center justify-center gap-4 size-full z-10">
             <p className="text-center headtext">
@@ -103,15 +99,14 @@ const About = memo(() => {
             <a
               href="/CV.pdf"
               download="Andrian_Pratama_CV.pdf"
-              className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-indigo to-royal rounded-lg hover:scale-105 transition-transform duration-200 cursor-pointer shadow-lg"
+              className="px-6 py-3 font-semibold text-white bg-gradient-to-r from-indigo to-royal rounded-lg hover:scale-105 transition-transform duration-200 cursor-pointer shadow-lg"
+              style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)' }}
             >
               Download CV
             </a>
           </div>
-          {/* Background CV Icon */}
           <CvIcon className="absolute -top-20 -right-20 opacity-10" width={250} height={250} />
         </div>
-        {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>

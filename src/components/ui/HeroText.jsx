@@ -13,7 +13,8 @@ const HeroText = memo(() => {
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-          className="text-4xl font-medium"
+          className="font-medium"
+          style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)' }}
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -23,7 +24,8 @@ const HeroText = memo(() => {
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
-            className="text-5xl font-medium text-neutral-300"
+            className="font-medium text-neutral-300"
+            style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -39,11 +41,13 @@ const HeroText = memo(() => {
           >
             <FlipWords
               words={words}
-              className="font-black text-white text-8xl"
+              className="font-black text-white"
+              style={{ fontSize: 'clamp(3.5rem, 7vw, 5rem)' }}
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-medium text-neutral-300"
+            className="font-medium text-neutral-300"
+            style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.5rem)' }}
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -56,7 +60,8 @@ const HeroText = memo(() => {
       {/* Mobile View */}
       <div className="flex- flex-col space-y-6 md:hidden">
         <motion.p
-          className="text-4xl font-medium"
+          className="font-medium"
+          style={{ fontSize: 'clamp(1.75rem, 7vw, 2.5rem)' }}
           variants={variants}
           initial="hidden"
           animate="visible"
@@ -66,7 +71,8 @@ const HeroText = memo(() => {
         </motion.p>
         <div>
           <motion.p
-            className="text-5xl font-black text-neutral-300"
+            className="font-black text-neutral-300"
+            style={{ fontSize: 'clamp(2rem, 8vw, 3rem)' }}
             variants={variants}
             initial="hidden"
             animate="visible"
@@ -82,11 +88,13 @@ const HeroText = memo(() => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-white text-7xl"
+              className="font-bold text-white"
+              style={{ fontSize: 'clamp(2.5rem, 10vw, 4.5rem)' }}
             />
           </motion.div>
           <motion.p
-            className="text-4xl font-black text-neutral300"
+            className="font-black text-neutral300"
+            style={{ fontSize: 'clamp(1.75rem, 7vw, 2.5rem)' }}
             variants={variants}
             initial="hidden"
             animate="visible"

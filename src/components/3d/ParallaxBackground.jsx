@@ -45,12 +45,10 @@ const ParallaxBackground = memo(() => {
   return (
     <section className="absolute inset-0 bg-black/40">
       <div className="relative h-screen overflow-y-hidden">
-        {/* Background Sky */}
         <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={backgroundStyles.sky}
         />
-        {/* Mountain Layer 3 */}
         <motion.div
           className="absolute inset-0 -z-40 will-change-transform"
           style={{
@@ -58,7 +56,6 @@ const ParallaxBackground = memo(() => {
             y: mountain3Y,
           }}
         />
-        {/* Planets */}
         <motion.div
           className="absolute inset-0 -z-30 will-change-transform"
           style={{
@@ -66,7 +63,6 @@ const ParallaxBackground = memo(() => {
             x: planetsX,
           }}
         />
-        {/* Mountain Layer 2 */}
         <motion.div
           className="absolute inset-0 -z-20 will-change-transform"
           style={{
@@ -74,7 +70,6 @@ const ParallaxBackground = memo(() => {
             y: mountain2Y,
           }}
         />
-        {/* Mountaine Layer 1 */}
         <motion.div
           className="absolute inset-0 -z-10 will-change-transform"
           style={{
