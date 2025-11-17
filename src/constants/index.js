@@ -40,6 +40,47 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 2,
+    title: "Smart Learning Dashboard",
+    description:
+      "An interactive web-based learning platform for American Sign Language (ASL) developed as part of the Human Computer Interaction (HCI) course project.",
+    subDescription: [
+      "Developed an interactive web-based learning platform for American Sign Language (ASL) as part of the Human Computer Interaction (HCI) course project.",
+      "Designed with a user-centered approach to help users learn sign language through visual demonstrations, quizzes, and responsive UI.",
+      "Implemented accessibility-focused features to ensure usability for diverse users.",
+      "Built using React.js, HTML, CSS, Tailwind CSS, and Sweetalert2 for enhanced user experience.",
+    ],
+    href: "https://github.com/Yanzz231/Tabi",
+    logo: "",
+    images: [
+      "/assets/projects/tabi/image.png",
+      "/assets/projects/tabi/image1.png",
+      "/assets/projects/tabi/image2.png",
+    ],
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Tailwind CSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 3,
+        name: "HTML",
+        path: "/assets/logos/html5.svg",
+      },
+      {
+        id: 4,
+        name: "CSS",
+        path: "/assets/logos/css3.svg",
+      },
+    ],
+  },
 ];
 
 export const mySocials = [
