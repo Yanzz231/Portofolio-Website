@@ -94,16 +94,18 @@ const ProjectItem = memo(({ project, index }) => {
         <motion.h1 variants={childVariants}>{project.title}</motion.h1>
         <motion.p variants={childVariants}>{project.description}</motion.p>
 
-        <motion.div variants={childVariants} className="flex gap-4 mt-6">
-          <a href={project.href} target="_blank" rel="noopener noreferrer">
-            <button className="project-btn-primary">
-              <span>View Project</span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-2">
-                <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </a>
-        </motion.div>
+        {project.href && project.href.trim() !== "" && (
+          <motion.div variants={childVariants} className="flex gap-4 mt-6">
+            <a href={project.href} target="_blank" rel="noopener noreferrer">
+              <button className="project-btn-primary">
+                <span>View Project</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-2">
+                  <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </a>
+          </motion.div>
+        )}
       </motion.div>
     </div>
   );

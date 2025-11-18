@@ -42,42 +42,133 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Smart Learning Dashboard",
+    title: "LuxCinema",
     description:
-      "An interactive web-based learning platform for American Sign Language (ASL) developed as part of the Human Computer Interaction (HCI) course project.",
+      "Built a full-stack cinema ticket booking platform integrating a secure payment gateway. Developed the frontend using React.js for dynamic and responsive UI, backend API services with Express.js, and payment processing module with Laravel. Features include movie listing, seat selection, booking history, and real-time payment confirmation.",
     subDescription: [
-      "Developed an interactive web-based learning platform for American Sign Language (ASL) as part of the Human Computer Interaction (HCI) course project.",
-      "Designed with a user-centered approach to help users learn sign language through visual demonstrations, quizzes, and responsive UI.",
-      "Implemented accessibility-focused features to ensure usability for diverse users.",
-      "Built using React.js, HTML, CSS, Tailwind CSS, and Sweetalert2 for enhanced user experience.",
+      "Built a full-stack cinema ticket booking platform integrating a secure payment gateway for seamless transactions.",
+      "Developed the frontend using React.js with Tailwind CSS for dynamic and responsive user interface.",
+      "Implemented backend API services with Express.js for handling booking logic and data management.",
+      "Integrated Laravel for payment processing module with Midtrans payment gateway.",
+      "Designed MySQL database schema for efficient data storage and retrieval.",
+      "Features include movie listing, seat selection, booking history, and real-time payment confirmation.",
     ],
-    href: "https://github.com/Yanzz231/Tabi",
+    href: "https://github.com/LuxCinemaa",
     logo: "",
-    images: [
-      "/assets/projects/tabi/image.png",
-      "/assets/projects/tabi/image1.png",
-      "/assets/projects/tabi/image2.png",
-    ],
+    images: ["/assets/projects/luxcinema/image.png"],
     tags: [
       {
         id: 1,
         name: "React.js",
-        path: "/assets/logos/react.svg",
+        path: "ReactLogo",
       },
       {
         id: 2,
         name: "Tailwind CSS",
-        path: "/assets/logos/tailwindcss.svg",
+        path: "TailwindcssLogo",
       },
       {
         id: 3,
-        name: "HTML",
-        path: "/assets/logos/html5.svg",
+        name: "Express.js",
+        path: "ExpressjsLogo",
       },
       {
         id: 4,
-        name: "CSS",
-        path: "/assets/logos/css3.svg",
+        name: "Laravel",
+        path: "LaravelLogo",
+      },
+      {
+        id: 5,
+        name: "MySQL",
+        path: "MysqlLogo",
+      },
+      {
+        id: 6,
+        name: "Midtrans",
+        path: "MidtransLogo",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "A2 Trans",
+    description:
+      "Developed a responsive and SEO-optimized landing page for A2 Trans, a bus rental service provider, along with a custom Content Management System (CMS) to manage fleet information, pricing, and booking details. Implemented on-page SEO best practices, resulting in successful indexing on Google Search. The CMS enables easy updates to content, images, and metadata without technical assistance.",
+    subDescription: [
+      "Developed a responsive and SEO-optimized landing page for A2 Trans, a bus rental service provider.",
+      "Built a custom Content Management System (CMS) to manage fleet information, pricing, and booking details.",
+      "Implemented on-page SEO best practices, resulting in successful indexing on Google Search.",
+      "Used Laravel and PHP for backend development, React.js for frontend interface.",
+      "Integrated MySQL database for efficient data management and retrieval.",
+      "The CMS enables easy updates to content, images, and metadata without technical assistance.",
+    ],
+    href: "",
+    logo: "",
+    images: ["/assets/projects/a2trans/image.png"],
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "ReactLogo",
+      },
+      {
+        id: 2,
+        name: "Laravel",
+        path: "LaravelLogo",
+      },
+      {
+        id: 3,
+        name: "PHP",
+        path: "PhpLogo",
+      },
+      {
+        id: 4,
+        name: "MySQL",
+        path: "MysqlLogo",
+      },
+      {
+        id: 5,
+        name: "JavaScript",
+        path: "JavascriptLogo",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SMK Buddhi",
+    description:
+      "Took the initiative to design and develop the official website for SMK Buddhi to enhance the school's online presence and provide accessible information for students, parents, and the public. Built with React.js and Strapi, featuring a news section, photo gallery, and contact form.",
+    subDescription: [
+      "Took the initiative to design and develop the official website for SMK Buddhi to enhance the school's online presence.",
+      "Built with React.js for a modern and responsive frontend, styled with Tailwind CSS.",
+      "Integrated Strapi headless CMS for easy content management by school administrators.",
+      "Implemented SQLite database for lightweight and efficient data storage.",
+      "Features include dynamic news section, photo gallery, and interactive contact form.",
+      "Provides accessible information for students, parents, and the public.",
+    ],
+    href: "",
+    logo: "",
+    images: ["/assets/projects/smkbuddhi/image.png"],
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "ReactLogo",
+      },
+      {
+        id: 2,
+        name: "Strapi.js",
+        path: "StrapiLogo",
+      },
+      {
+        id: 3,
+        name: "Tailwind CSS",
+        path: "TailwindcssLogo",
+      },
+      {
+        id: 4,
+        name: "SQLite",
+        path: "SqliteLogo",
       },
     ],
   },
@@ -247,36 +338,43 @@ export const reviews = [
 
 export const certifications = [
   {
-    title: "Web Design Competition 2024",
-    organizer: "National IT Competition",
-    date: "March 2024",
-    achievement: "1st Place",
-    description: "Secured first place in the national-level web design competition, showcasing advanced UI/UX design and frontend development skills.",
-    logo: "/assets/certifications/trophy.svg", // optional
-    projectUrl: "https://github.com/yourusername/project", // optional
-    articleUrl: "https://example.com/article", // optional
-    skills: ["UI/UX", "React", "Figma"],
+    title: "Arkavidia 9.0 - IT Competition",
+    organizer: "Institut Teknologi Bandung (ITB)",
+    date: "May 2025",
+    achievement: "Finalist + Most Favorite Team",
+    description:
+      "Achieved Finalist position and won Most Favorite Team award at Arkavidia 9.0, one of Indonesia's largest IT competitions hosted by Institut Teknologi Bandung. Competed against top teams nationwide, demonstrating innovation, technical excellence, and teamwork in developing technology solutions.",
+    logo: "/assets/lomba/arkavidia/image.png",
+    projectUrl: "https://github.com/NNOGAA",
+    articleUrl: "https://socs.binus.ac.id/2025/05/16/mahasiswa-binus-raih-prestasi-di-arkavidia-9-0-itb/",
+    certificates: [
+      {
+        name: "Finalist Certificate",
+        url: "/assets/lomba/arkavidia/Finalist_Certificate_Andrian Pratama.pdf",
+      },
+      {
+        name: "Most Favorite Team Certificate",
+        url: "/assets/lomba/arkavidia/Most Favorite Team_Certificate_Andrian Pratama.pdf",
+      },
+    ],
+    skills: ["Innovation", "Team Work", "Problem Solving", "Software Development"],
   },
   {
-    title: "Tech Summit Hackathon 2024",
-    organizer: "Tech Summit Indonesia",
-    date: "February 2024",
-    achievement: "Winner - Best Innovation",
-    description: "Won the Best Innovation award for developing an AI-powered learning platform within 24 hours.",
-    logo: "/assets/certifications/hackathon.svg", // optional
-    projectUrl: "https://github.com/yourusername/hackathon-project", // optional
-    articleUrl: "#", // optional
-    skills: ["JavaScript", "AI/ML", "Team Work"],
-  },
-  {
-    title: "Code Challenge Competition",
-    organizer: "Developer Community",
-    date: "January 2024",
+    title: "Samsung Solve for Tomorrow 2025",
+    organizer: "Samsung Indonesia",
+    date: "2025",
     achievement: "Finalist",
-    description: "Reached the finals of the national coding competition with advanced algorithm and data structure solutions.",
-    logo: "", // optional - will show emoji if empty
-    projectUrl: "", // optional
-    articleUrl: "", // optional
-    skills: ["Algorithms", "Problem Solving", "Python"],
+    description:
+      "Selected as Finalist in Samsung Solve for Tomorrow 2025, a prestigious innovation competition focused on developing technology solutions to address social and environmental challenges. Demonstrated creative problem-solving and technical innovation in creating impactful solutions for the community.",
+    logo: "/assets/lomba/samsung/image.png",
+    projectUrl: "https://github.com/VoiceChess",
+    articleUrl: "https://news.samsung.com/id/semifinalis-sft-2025-angkat-tema-sport-tech-environment",
+    certificates: [
+      {
+        name: "Finalist Certificate",
+        url: "/assets/lomba/samsung/Sertifikat Finalis Samsung Solve for Tomorrow 2025.pdf",
+      },
+    ],
+    skills: ["Innovation", "Social Impact", "Technology Solution", "Team Work"],
   },
 ];

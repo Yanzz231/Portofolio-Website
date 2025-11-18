@@ -37,7 +37,7 @@ const childVariants = {
   },
 };
 
-const CertificationItem = memo(({ cert, index }) => {
+const CertificationItem = memo(({ cert }) => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
@@ -76,9 +76,36 @@ const CertificationItem = memo(({ cert, index }) => {
             {cert.date}
           </motion.div>
 
-          <motion.h2 variants={childVariants} className="certTitle">
-            {cert.title}
-          </motion.h2>
+          <div className="certTitleRow">
+            <motion.h2 variants={childVariants} className="certTitle">
+              {cert.title}
+            </motion.h2>
+
+            {cert.certificates && cert.certificates.length > 0 && (
+              <motion.div variants={childVariants} className="certDownloadBtnWrapper">
+                <div className="certDownloadDropdown">
+                  <button className="certDownloadToggle">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 13L10 4M10 13L7 10M10 13L13 10M4 16L16 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <span>Certificates</span>
+                  </button>
+                  <div className="certDownloadMenu">
+                    {cert.certificates.map((certificate, idx) => (
+                      <a key={idx} href={certificate.url} download target="_blank" rel="noopener noreferrer">
+                        <div className="certDownloadMenuItem">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 10L8 3M8 10L6 8M8 10L10 8M3 13L13 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                          <span>{certificate.name}</span>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </div>
 
           <motion.p variants={childVariants} className="certOrganizer">
             {cert.organizer}
