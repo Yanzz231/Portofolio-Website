@@ -608,7 +608,7 @@ body {
   align-items: center;
   justify-content: flex-center;
   gap: clamp(40px, 6vw, 100px);
-  padding: 80px 5% 0 3%;
+  padding: 80px 5% 0 0;
   flex-shrink: 0;
   box-sizing: border-box;
 }
