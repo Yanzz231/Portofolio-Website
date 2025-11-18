@@ -185,6 +185,11 @@ export const mySocials = [
     href: "https://www.instagram.com/iyanmikasa/",
     icon: "/assets/socials/instagram.svg",
   },
+  {
+    name: "GitHub",
+    href: "https://github.com/Yanzz231",
+    icon: "/assets/socials/github.svg",
+  },
 ];
 
 export const experiences = [

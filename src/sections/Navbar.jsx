@@ -1,11 +1,12 @@
 import { memo, useState, useEffect } from "react";
 import { mySocials } from "@/constants";
-import { InstagramIcon, LinkedInIcon } from "@/components/socials";
+import { InstagramIcon, LinkedInIcon, GitHubIcon } from "@/components/socials";
 import { HomeIcon, UserIcon, BriefcaseIcon, AwardIcon, CertificateIcon, MailIcon } from "@/components/icons";
 
 const socialIconMap = {
   instagram: InstagramIcon,
   linkedin: LinkedInIcon,
+  github: GitHubIcon,
 };
 
 const navLinks = [
