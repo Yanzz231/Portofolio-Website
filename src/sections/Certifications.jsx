@@ -42,7 +42,7 @@ const CertificationItem = memo(({ cert }) => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="certItem" ref={ref}>
+    <div className="certItem snap-center snap-always" ref={ref}>
       <motion.div
         variants={cardVariants}
         animate={isInView ? "animate" : "initial"}
@@ -183,7 +183,7 @@ const Certifications = memo(() => {
   });
 
   return (
-    <div className="certifications" ref={ref}>
+    <div className="certifications snap-y snap-mandatory" ref={ref}>
       <motion.div className="certList" style={{ x: smoothX }}>
         {certifications.map((cert, index) => (
           <CertificationItem cert={cert} index={index} key={index} />

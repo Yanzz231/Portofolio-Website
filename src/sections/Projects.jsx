@@ -66,7 +66,7 @@ const ProjectItem = memo(({ project, index }) => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
-    <div className="pItem" ref={ref}>
+    <div className="pItem snap-center snap-always" ref={ref}>
       <motion.div
         variants={imgVariants}
         animate={isInView ? "animate" : "initial"}
@@ -115,7 +115,6 @@ ProjectItem.displayName = 'ProjectItem';
 
 const Projects = memo(() => {
   const ref = useRef(null);
-  const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -139,13 +138,15 @@ const Projects = memo(() => {
   });
 
   return (
-    <div className="portfolio" ref={ref}>
-      <motion.div className="pList " style={{ x: smoothX }}>
+    <div className="portfolio snap-y snap-mandatory" ref={ref}>
+      <motion.div className="pList" style={{ x: smoothX }}>
         {myProjects.map((project, index) => (
           <ProjectItem project={project} index={index} key={project.id} />
         ))}
       </motion.div>
 
+      <section />
+      <section />
       <section />
       <section />
     </div>

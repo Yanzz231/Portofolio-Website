@@ -211,7 +211,6 @@ body {
   height: 400vh;
   position: relative;
   will-change: transform;
-  scroll-snap-type: y mandatory;
 }
 
 .pList {
@@ -235,8 +234,6 @@ body {
   justify-content: flex-center;
   gap: clamp(40px, 6vw, 100px);
   padding: 80px 5% 0 3%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -516,14 +513,26 @@ body {
 }
 
 @media (max-width: 768px) {
+  .portfolio {
+    height: 400vh;
+  }
+
+  .pList {
+    position: sticky;
+    overflow: hidden;
+  }
+
   .pItem {
-    padding: 90px 20px 150px 20px;
+    flex-direction: column;
+    padding: 80px 20px 120px 20px;
     justify-content: center;
+    gap: 30px;
   }
 
   .pImg,
   .pText {
-    width: 95%;
+    width: 90%;
+    max-width: 500px;
   }
 
   .pText {
@@ -539,11 +548,11 @@ body {
   }
 
   .project-btn-primary {
-    padding: 16px 32px;
-    font-size: 15px;
-    min-height: 52px;
-    width: 100%;
-    max-width: 280px;
+    padding: 14px 28px;
+    font-size: 14px;
+    min-height: 48px;
+    width: auto;
+    max-width: none;
   }
 
   .project-tag {
@@ -577,7 +586,6 @@ body {
   height: 400vh;
   position: relative;
   will-change: transform;
-  scroll-snap-type: y mandatory;
 }
 
 .certList {
@@ -601,8 +609,6 @@ body {
   justify-content: flex-center;
   gap: clamp(40px, 6vw, 100px);
   padding: 80px 5% 0 3%;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -651,6 +657,8 @@ body {
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .certLogo {
@@ -674,10 +682,12 @@ body {
   flex-direction: column;
   gap: 10px;
   text-align: left;
+  position: relative;
+  z-index: 5;
 }
 
 .certDate {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: #a78bfa;
   text-transform: uppercase;
@@ -685,7 +695,7 @@ body {
 }
 
 .certTitle {
-  font-size: clamp(24px, 4.5vw, 36px);
+  font-size: clamp(20px, 4vw, 30px);
   font-weight: 900;
   line-height: 1.2;
   background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
@@ -698,14 +708,14 @@ body {
 
 .certOrganizer {
   font-weight: 600;
-  font-size: clamp(13px, 1.8vw, 16px);
+  font-size: clamp(12px, 1.6vw, 14px);
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .certDesc {
   font-weight: 300;
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(11px, 1.3vw, 13px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
   margin: 6px 0;
@@ -720,11 +730,11 @@ body {
 }
 
 .certTag {
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 16px;
   background: rgba(92, 51, 204, 0.15);
   border: 1px solid rgba(92, 51, 204, 0.3);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: #a78bfa;
   backdrop-filter: blur(10px);
@@ -747,11 +757,11 @@ body {
 
 .certBtnPrimary {
   background: linear-gradient(135deg, #5c33cc 0%, #ca2f8c 100%);
-  padding: 16px 32px;
+  padding: 14px 32px;
   border-radius: 12px;
   border: none;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   color: white;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -776,11 +786,11 @@ body {
 
 .certBtnSecondary {
   background: transparent;
-  padding: 16px 32px;
+  padding: 14px 32px;
   border-radius: 12px;
   border: 2px solid rgba(92, 51, 204, 0.5);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   color: #a78bfa;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -912,21 +922,53 @@ body {
   .certBtnPrimary,
   .certBtnSecondary {
     padding: 15px 30px;
-    font-size: 14px;
+    font-size: 15px;
     min-height: 50px;
   }
 }
 
 @media (max-width: 768px) {
+  .certifications {
+    height: 300vh;
+  }
+
+  .certList {
+    position: sticky;
+    overflow: hidden;
+  }
+
   .certItem {
-    padding: 90px 20px 150px 20px;
+    padding: 80px 20px 120px 20px;
     justify-content: center;
   }
 
   .certCard {
-    width: 95%;
-    max-width: 100%;
-    padding: 32px 24px;
+    width: 90%;
+    max-width: 500px;
+    padding: 28px 20px;
+  }
+
+  .certTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .certDownloadBtnWrapper {
+    width: 100%;
+  }
+
+  .certDownloadToggle {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .certDownloadMenu {
+    left: 0;
+    right: 0;
+    min-width: 100%;
   }
 
   .certLogoWrapper {
@@ -958,13 +1000,19 @@ body {
     font-size: clamp(12px, 3vw, 14px);
   }
 
+  .certButtons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
   .certBtnPrimary,
   .certBtnSecondary {
-    padding: 16px 28px;
-    font-size: 14px;
-    min-height: 52px;
-    width: 100%;
-    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 13px;
+    min-height: 44px;
+    flex: 1;
+    max-width: 160px;
   }
 
   .certTag {
