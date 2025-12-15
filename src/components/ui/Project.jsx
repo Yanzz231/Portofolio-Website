@@ -24,11 +24,11 @@ const Project = memo(({
   return (
     <>
       <div
-        className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
+        className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-10 gap-6 sm:gap-0"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div>
+        <div className="flex-1">
           <p className="text-2xl">{title}</p>
           <div className="flex gap-5 mt-2 text-sand">
             {tags.map((tag) => (
@@ -38,7 +38,7 @@ const Project = memo(({
         </div>
         <button
           onClick={handleShowDetails}
-          className="flex items-center gap-1 cursor-pointer hover-animation text-white"
+          className="flex items-center gap-1 cursor-pointer transition-transform duration-300 hover:-translate-y-1 text-white"
         >
           Read More
           <ArrowRightIcon />
