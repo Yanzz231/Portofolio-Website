@@ -67,7 +67,7 @@ const ProjectItem = memo(({ project, index }) => {
 
   return (
     <div
-      className="min-h-screen md:h-screen w-full md:w-screen md:min-w-screen md:max-w-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[clamp(40px,6vw,100px)] py-10 md:py-0 px-[5%] md:pr-[5%] md:shrink-0 box-border md:snap-start md:snap-always "
+      className="min-h-screen md:h-screen w-full md:w-screen md:min-w-screen md:max-w-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-8 md:gap-[clamp(40px,6vw,100px)] py-10 md:py-0 px-[5%] md:pl-[0%] md:pr-[5%] md:shrink-0 box-border md:snap-start md:snap-always "
       ref={ref}
     >
       {/* Image Container */}
