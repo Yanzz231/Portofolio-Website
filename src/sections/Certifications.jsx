@@ -1,4 +1,4 @@
-import { useRef, memo, useState, useEffect } from "react";
+import { useRef, memo } from "react";
 import { certifications } from "../constants";
 import { motion, useInView, useScroll, useTransform, useSpring } from "motion/react";
 
@@ -43,7 +43,7 @@ const CertificationItem = memo(({ cert }) => {
 
   return (
     <div
-      className="min-h-screen md:h-screen w-full md:w-screen md:min-w-screen md:max-w-screen overflow-hidden flex items-center justify-center gap-[clamp(40px,6vw,100px)] py-10 md:py-0 px-[5%] md:pl-[0%] md:pr-[7%] md:shrink-0 box-border md:snap-start md:snap-always"
+      className="md:h-screen w-full md:w-screen md:min-w-screen md:max-w-screen overflow-hidden flex items-center justify-center gap-4 md:gap-[clamp(40px,6vw,100px)] py-6 md:py-0 px-[5%] md:pl-[0%] md:pr-[7%] md:shrink-0 box-border"
       ref={ref}
     >
       <motion.div
@@ -176,17 +176,6 @@ CertificationItem.displayName = 'CertificationItem';
 
 const Certifications = memo(() => {
   const ref = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -209,32 +198,30 @@ const Certifications = memo(() => {
     mass: 0.5
   });
 
-  // Mobile: Simple vertical scroll (NO SNAP, cards stack)
-  if (isMobile) {
-    return (
-      <div className="w-full">
+  return (
+    <>
+      {/* Mobile: Simple vertical scroll (NO SNAP, cards stack) */}
+      <div className="w-full md:hidden">
         {certifications.map((cert, index) => (
           <CertificationItem cert={cert} key={index} />
         ))}
       </div>
-    );
-  }
 
-  // Desktop: Horizontal transform with snap
-  return (
-    <div className="h-[400vh] relative will-change-transform" ref={ref}>
-      <motion.div
-        className="sticky top-0 flex h-screen w-max will-change-transform overflow-hidden"
-        style={{ x: smoothX }}
-      >
-        {certifications.map((cert, index) => (
-          <CertificationItem cert={cert} key={index} />
-        ))}
-      </motion.div>
+      {/* Desktop: Horizontal transform with snap */}
+      <div className="hidden md:block h-[400vh] relative will-change-transform" ref={ref}>
+        <motion.div
+          className="sticky top-0 flex h-screen w-max will-change-transform overflow-hidden"
+          style={{ x: smoothX }}
+        >
+          {certifications.map((cert, index) => (
+            <CertificationItem cert={cert} key={index} />
+          ))}
+        </motion.div>
 
-      <section />
-      <section />
-    </div>
+        <section />
+        <section />
+      </div>
+    </>
   );
 });
 
